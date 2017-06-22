@@ -32,11 +32,11 @@ public class FindAllNumbersDisappearedArray {
 
         for(int i=0;i<nums.length;i++){
             if(nums[i]>0){
-                res.add(i+1);
+                list.add(i+1);
             }
         }
 
-        return res;
+        return list;
 
     }
 }
