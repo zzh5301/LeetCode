@@ -26,8 +26,9 @@ public class FindAllNumbersDisappearedArray {
 
         List<Integer> list=new ArrayList<>();
         for(int i=0;i<nums.length;i++){
-            int val=nums[i]-1;
-            nums[val]=-nums[val];
+            int val=Math.abs(nums[i])-1;
+            if(nums[val]>0)
+                nums[val]=-nums[val];
         }
 
         for(int i=0;i<nums.length;i++){
@@ -37,6 +38,8 @@ public class FindAllNumbersDisappearedArray {
         }
 
         return list;
+
+    }
 
     }
 }
